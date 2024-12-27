@@ -1,0 +1,46 @@
+﻿﻿@model YummyProject.Models.Chef
+
+@{
+    ViewBag.Title = "AddChef";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<br />
+<h2>Şef Bilgileri Ekleme Sayfası</h2>
+<br />
+
+<form method="post" class="form-control">
+
+    <label><strong>Resim Link</strong></label>
+    @Html.TextBoxFor(x => x.ImgUrl, new { @class = "form-control" })
+    <br />
+    <label><strong>Ad Soyad</strong></label>
+    @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+    <br />
+    <label><strong>Ünvan</strong></label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    <label><strong>Tanım</strong></label>
+    @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+    <br />
+
+    @*<label><strong>Sosyal Medya İsmi </strong></label>
+        <input name="SocialMediaName" class="form-control" />
+        <br />
+
+        <label><strong>Sosyal Medya Link </strong></label>
+        <input name="Url" class="form-control" />
+        <br />
+
+        <label><strong>Sosyal Medya Ikon </strong></label>
+        <input name="Icon" class="form-control" />
+        <br />*@
+
+    <div class="text-center">
+        <button class="btn btn-warning">Kaydet</button>
+    </div>
+    <br />
+
+</form>
+<br />/h2>
+

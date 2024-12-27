@@ -1,0 +1,76 @@
+﻿@*<form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="600">
+        <div class="row gy-4">
+
+            <div class="col-md-6">
+                <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+            </div>
+
+            <div class="col-md-6 ">
+                <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+            </div>
+
+            <div class="col-md-12">
+                <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+            </div>
+
+            <div class="col-md-12">
+                <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+            </div>
+
+            <div class="col-md-12 text-center">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                <button type="submit">Send Message</button>
+            </div>
+
+        </div>
+    </form>*@
+
+@model YummyProject.Models.Message
+
+@if (ViewBag.Message != null)
+{
+    <div class="alert alert-success">
+        <strong>Başarılı!</strong> @ViewBag.Message
+    </div>
+}
+
+@if (ViewBag.ErrorMessage != null)
+{
+    <div class="alert alert-danger">
+        <strong>Hata!</strong> @ViewBag.ErrorMessage
+    </div>
+}
+
+@using (Html.BeginForm("DefaultMessage", "Default", FormMethod.Post, new { @class = "php-email-form", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    <div class="row gy-4">
+        <div class="col-md-6">
+            @Html.TextBoxFor(m => m.Name, new { @class = "form-control", placeholder = "Your Name", required = "required" })
+            @Html.ValidationMessageFor(m => m.Name)
+        </div>
+        <div class="col-md-6">
+            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Your Email", required = "required" })
+            @Html.ValidationMessageFor(m => m.Email)
+        </div>
+        <div class="col-md-12">
+            @Html.TextBoxFor(m => m.Subject, new { @class = "form-control", placeholder = "Subject", required = "required" })
+            @Html.ValidationMessageFor(m => m.Subject)
+        </div>
+        <div class="col-md-12">
+            @Html.TextAreaFor(m => m.MessageContent, new { @class = "form-control", rows = 6, placeholder = "Message", required = "required" })
+            @Html.ValidationMessageFor(m => m.MessageContent)
+        </div>
+    </div>
+
+    <div class="text-center mt-3">
+        <div class="loading">Loading</div>
+        <div class="error-message"></div>
+        <div class="sent-message">Your message was sent. Thank you!</div>
+        <button type="submit">Mesaj Gönder</button>
+    </div>
+}
+

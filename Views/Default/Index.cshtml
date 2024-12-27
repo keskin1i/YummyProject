@@ -1,0 +1,189 @@
+﻿﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/UILayout/Index.cshtml";
+}
+
+<!-- Feature Section -->
+@Html.Action("DefaultFeature")
+<!-- /Hero Section -->
+<!-- About Section -->
+@Html.Action("DefaultAbout")
+<!-- /About Section -->
+<!-- Service Section -->
+<section id="why-us" class="why-us section light-background">
+
+    <div class="container">
+
+        <div class="row gy-4">
+
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="why-box">
+                    <h3>Neden Yummy'yi Tercih Etmelisiniz?</h3>
+                    <p>
+                        Yummy, yemeklerinizi en kaliteli malzemelerle hazırlayan ve size sağlıklı, lezzetli yemekler sunmayı hedefleyen bir markadır. Müşterilerimizin memnuniyetini her zaman ön planda tutarak, onların beklentilerini karşılamak için sürekli yenilikler yapıyoruz. Yummy, her zaman taze ve güvenilir ürünler sunarak sofralarınıza lezzet katmaktadır.
+                    </p>
+                    <div class="text-center">
+                        <a href="#" class="more-btn"><span>Daha Fazla Öğren</span> <i class="bi bi-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div><!-- End Why Box -->
+
+            <div class="col-lg-8 d-flex align-items-stretch">
+                <div class="row gy-4" data-aos="fade-up" data-aos-delay="200">
+
+                    <div class="col-xl-4">
+                        <div class="icon-box d-flex flex-column justify-content-center align-items-center">
+                            <i class="bi bi-clipboard-data"></i>
+                            <h4>Vücut fonksiyonlarını geliştiren işlevsellik</h4>
+                            <p>Yummy'nin sunduğu sağlıklı ve besleyici yemekler, vücudunuzun ihtiyaç duyduğu enerjiyi sağlarken, aynı zamanda genel sağlık seviyenizi artırır. Düzenli olarak bu yemekleri tüketmek, enerji seviyenizi yükseltirken vücudunuzun tüm fonksiyonlarını optimize eder.</p>
+                        </div>
+                    </div><!-- End Icon Box -->
+
+                    <div class="col-xl-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="icon-box d-flex flex-column justify-content-center align-items-center">
+                            <i class="bi bi-gem"></i>
+                            <h4>Uygulama işlevselliği ve yenilikçi tasarımlar</h4>
+                            <p>Yummy, sadece yemeklerle değil, aynı zamanda sunduğu kullanıcı dostu uygulama ve web sitesiyle de fark yaratır. İleri teknolojiyle tasarlanmış platformlar, siparişlerinizi hızlı ve kolay bir şekilde vermenizi sağlar.</p>
+                        </div>
+                    </div><!-- End Icon Box -->
+
+                    <div class="col-xl-4" data-aos="fade-up" data-aos-delay="400">
+                        <div class="icon-box d-flex flex-column justify-content-center align-items-center">
+                            <i class="bi bi-inboxes"></i>
+                            <h4>Verimli ve sürdürülebilir çalışma metotları</h4>
+                            <p>Yummy, mutfak operasyonlarını verimli bir şekilde yönetirken, çevre dostu uygulamalarla sürdürülebilirlik ilkesini de benimsemektedir. Yemeği hazırlarken ve servis ederken kullanılan tüm malzemeler, çevreyi koruma ve kaynakları doğru kullanma prensiplerine dayalı olarak seçilmektedir.</p>
+                        </div>
+                    </div><!-- End Icon Box -->
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section><!-- /Why Us Section -->
+<!-- Stats Section -->
+<!--<section id="stats" class="stats section dark-background">
+
+    <img src="~/Temp/yummy-red-1.0.0/assets/img/stats-bg.jpg" alt="" data-aos="fade-in">
+
+    <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+            <div class="col-lg-3 col-md-6">
+                <div class="stats-item text-center w-100 h-100">
+                    <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+                    <p>Clients</p>
+                </div>
+            </div>-->
+<!-- End Stats Item -->
+<!--<div class="col-lg-3 col-md-6">
+    <div class="stats-item text-center w-100 h-100">
+        <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
+        <p>Projects</p>
+    </div>
+</div>-->
+<!-- End Stats Item -->
+<!--<div class="col-lg-3 col-md-6">
+    <div class="stats-item text-center w-100 h-100">
+        <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1" class="purecounter"></span>
+        <p>Hours Of Support</p>
+    </div>
+</div>-->
+<!-- End Stats Item -->
+<!--<div class="col-lg-3 col-md-6">
+    <div class="stats-item text-center w-100 h-100">
+        <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1" class="purecounter"></span>
+        <p>Workers</p>
+    </div>
+</div>-->
+<!-- End Stats Item -->
+<!--</div>
+
+    </div>
+
+</section>-->
+<!-- /Stats Section -->
+
+<section id="stats" class="stats section dark-background">
+
+    <img src="~/Temp/yummy-red-1.0.0/assets/img/stats-bg.jpg" alt="" data-aos="fade-in">
+
+    <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+            <div class="col-lg-3 col-md-6">
+                <div class="stats-item text-center w-100 h-100">
+                    <span>@ViewBag.soupCount</span>
+                    <p>Çorbalar</p>
+                </div>
+            </div><!-- End Stats Item -->
+
+            <div class="col-lg-3 col-md-6">
+                <div class="stats-item text-center w-100 h-100">
+                    <span>@ViewBag.mostExpensiveProduct</span>
+                    <p>En Pahalı Ürün</p>
+                </div>
+            </div><!-- End Stats Item -->
+
+            <div class="col-lg-3 col-md-6">
+                <div class="stats-item text-center w-100 h-100">
+                    <span>@ViewBag.avgPrice</span>
+                    <p>Ortalama Fiyat</p>
+                </div>
+            </div><!-- End Stats Item -->
+
+            <div class="col-lg-3 col-md-6">
+                <div class="stats-item text-center w-100 h-100">
+                    <span>@ViewBag.cheapestPrice</span>
+                    <p>En Ucuz Ürün</p>
+                </div>
+            </div><!-- End Stats Item -->
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Product Section -->
+@Html.Action("DefaultProduct")
+<!-- /Menu Section -->
+<!-- Testimonials Section -->
+@Html.Action("DefaultTestimonial")
+<!-- Events Section -->
+@Html.Action("DefaultEvent")
+<!-- Chefs Section -->
+@Html.Action("DefaultChef")
+<!-- Booking Section -->
+<section id="book-a-table" class="book-a-table section">
+
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+        <h2>Rezervasyon</h2>
+        <p><span>Revervasyon</span> <span class="description-title">Yapın<br></span></p>
+    </div><!-- End Section Title -->
+
+    <div class="container">
+
+        <div class="row g-0" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="col-lg-4 reservation-img" style="background-image: url(/Temp/yummy-red-1.0.0/assets/img/reservation.jpg);"></div>
+
+            <div class="col-lg-8 d-flex align-items-center reservation-form-bg" data-aos="fade-up" data-aos-delay="200">
+                @Html.Action("DefaultBooking")
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- Photo Gallery Section -->
+@Html.Action("DefaultPhotoGalery")
+<!-- Contact Section -->
+@Html.Action("DefaultContact")
